@@ -16,7 +16,7 @@ function App() {
           <li>About Us</li>
         </ul>
 
-        <div className="  lg:flex items-center gap-20 text-xl">
+        <div className=" hidden lg:flex items-center gap-20 text-xl">
           <i className="fa-solid fa-magnifying-glass text-[#474748]"></i>
           <i className="fa-regular fa-bell text-[#4c4c4d]"></i>
           <i className="fa-regular fa-user text-[#515152]"></i>
@@ -24,15 +24,15 @@ function App() {
       </nav>
       {/* main section starts from here */}
 
-      <main className="flex justify-between items-center  gap-8 ">
+      <main className="flex justify-between items-center  gap-8 px-7 lg:px-0">
         {/* Dashboard */}
-        <div className="w-[550px] border-r-2 px-8 self-stretch">
+        <div className=" hidden lg:block w-[550px] border-r-2 px-8 self-stretch ">
           <button>
-            <i className="fa-solid fa-arrow-left text-[#232424]"></i>
+            <i className="fa-solid fa-arrow-left text-[#232424] pt-5"></i>
           </button>
 
           <ul>
-            <li className="w-full flex item-center justify-between py-5">
+            <li className="w-full flex item-center justify-between my-5 hover:bg-gray-200">
               <p>
                 {" "}
                 <i className="fa-solid fa-border-all text-[#232424] mr-5 text-xl"></i>{" "}
@@ -45,7 +45,7 @@ function App() {
               </p>
             </li>
 
-            <li className="flex item-center justify-between py-5">
+            <li className="flex item-center justify-between my-5 hover:bg-gray-200">
               <p>
                 {" "}
                 <i class="fa-solid fa-link text-[#232424] mr-5 text-xl"></i>{" "}
@@ -58,7 +58,7 @@ function App() {
               </p>
             </li>
 
-            <li className="flex item-center justify-between py-5">
+            <li className="flex item-center justify-between my-5 hover:bg-gray-200">
               <p>
                 {" "}
                 <i class="fa-regular fa-file-lines text-[#232424] mr-5 text-xl"></i>{" "}
@@ -71,7 +71,7 @@ function App() {
               </p>
             </li>
 
-            <li className="flex item-center justify-between py-5">
+            <li className="flex item-center justify-between my-5 hover:bg-gray-200">
               <p>
                 <i class="fa-solid fa-building-columns text-[#232424] mr-5 text-xl"></i>{" "}
                 Bank Details
@@ -86,8 +86,8 @@ function App() {
         </div>
 
         {/* form-content */}
-        <div className=" mr-24 pb-10">
-          <h1 className="text-4xl font-semibold pt-10 pb-5 text-[#262626]">
+        <div className=" lg:mr-24 pb-7 lg:pb-10 ">
+          <h1 className="text-4xl font-semibold pt-6 lg:pt-10 pb-5 text-[#262626]">
             Update Bank Details
           </h1>
           <p className=" pb-5">
@@ -96,12 +96,12 @@ function App() {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <form className="grid grid-cols-2 border-2 p-5 shadow-md">
-            <label className="uppercase mb-5" htmlFor="name">
+          <form className="lg:grid  lg:grid-cols-2 border-2 p-5 shadow-md">
+            <label className="uppercase mb-5  " htmlFor="name">
               account holder name
             </label>
             <input
-              className="border-2 mb-5 py-1 px-3"
+              className="border-2 mb-5 mt-3 lg:mt-0  py-1 px-3 w-full lg:w-auto"
               type="text"
               name="name"
               id="name"
@@ -112,7 +112,7 @@ function App() {
               account number
             </label>
             <input
-              className="border-2  mb-5 py-1 px-3"
+              className="border-2  mb-5 mt-3 lg:mt-0 py-1 px-3 w-full lg:w-auto"
               type="text"
               name="name"
               id="account"
@@ -123,7 +123,7 @@ function App() {
               ifsc code
             </label>
             <input
-              className="border-2  mb-5 py-1 px-3"
+              className="border-2  mb-5 mt-3 lg:mt-0 py-1 px-3 w-full lg:w-auto"
               type="text"
               name="name"
               id="ifsc"
@@ -134,7 +134,7 @@ function App() {
               bank name
             </label>
             <input
-              className="border-2  mb-5 py-1 px-3"
+              className="border-2  mb-5 mt-3 lg:mt-0 py-1 px-3 w-full lg:w-auto"
               type="text"
               name="name"
               id="bank"
@@ -145,7 +145,7 @@ function App() {
               bank city
             </label>
             <input
-              className="border-2  mb-5 py-1 px-3"
+              className="border-2  mb-5 mt-3 lg:mt-0 py-1 px-3 w-full lg:w-auto"
               type="text"
               name="name"
               id="city"
@@ -156,7 +156,7 @@ function App() {
               branch name
             </label>
             <input
-              className="border-2  mb-5 py-1 px-3"
+              className="border-2  mb-5 mt-3 lg:mt-0 py-1 px-3 w-full lg:w-auto"
               type="text"
               name="name"
               id="branch"
@@ -167,18 +167,22 @@ function App() {
               relation with account holder
             </label>
             <input
-              className="border-2  mb-5 py-1 px-3"
+              className="border-2  mb-5 mt-3 lg:mt-0 py-1 px-3 w-full lg:w-auto"
               type="text"
               name="name"
               id="relation"
               placeholder="Relation With Account Holder"
             />
 
-            <label className="uppercase mb-5" htmlFor="consent">
+            <label className="uppercase mb-5 " htmlFor="consent">
               consent
             </label>
-            <div className="border-2  mb-5 flex  item-start pt-5 pb-10 px-5">
-              <input className="self-start mt-2" type="checkbox" id="consent" />
+            <div className="border-2  mb-5  mt-3 lg:mt-0 flex item-start pt-5 pb-10 px-5 ">
+              <input
+                className="self-start mb-5 mt-3 lg:mt-0"
+                type="checkbox"
+                id="consent"
+              />
               <p className="self-start pl-2 text-gray-500">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
